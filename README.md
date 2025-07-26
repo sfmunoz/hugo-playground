@@ -7,6 +7,7 @@ Hugo playground
 - [Installation](#installation)
   - [Binary](#binary)
   - [Source](#source)
+- [Quick start](#quick-start)
 
 ## References
 
@@ -77,4 +78,51 @@ Result:
 ```
 $ hugo version
 hugo v0.148.1+extended linux/amd64 BuildDate=unknown
+```
+
+## Quick start
+
+Ref: [https://gohugo.io/getting-started/quick-start/](https://gohugo.io/getting-started/quick-start/)
+
+```
+$ hugo new site quickstart
+Congratulations! Your new Hugo site was created in /tmp/quickstart.
+
+Just a few more steps...
+
+1. Change the current directory to /tmp/quickstart.
+2. Create or install a theme:
+   - Create a new theme with the command "hugo new theme <THEMENAME>"
+   - Or, install a theme from https://themes.gohugo.io/
+3. Edit hugo.toml, setting the "theme" property to the theme name.
+4. Create new content with the command "hugo new content <SECTIONNAME>/<FILENAME>.<FORMAT>".
+5. Start the embedded web server with the command "hugo server --buildDrafts".
+
+See documentation at https://gohugo.io/.
+
+$ cd quickstart
+
+$ find . -type f | sort
+./archetypes/default.md
+./hugo.toml
+
+$ cat archetypes/default.md
++++
+date = '{{ .Date }}'
+draft = true
+title = '{{ replace .File.ContentBaseName "-" " " | title }}'
++++
+
+$ cat hugo.toml
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+$ git init
+
+$ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+
+$ echo "theme = 'ananke'" >> hugo.toml
+
+$ hugo server
 ```
