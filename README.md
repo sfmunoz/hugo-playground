@@ -8,6 +8,8 @@ Hugo playground
   - [Binary](#binary)
   - [Source](#source)
 - [Quick start](#quick-start)
+  - [Add content](#add-content)
+  - [Publish](#publish)
 
 ## References
 
@@ -125,4 +127,48 @@ $ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git the
 $ echo "theme = 'ananke'" >> hugo.toml
 
 $ hugo server
+```
+
+### Add content
+
+```
+$ hugo new content content/posts/my-first-post.md
+Content "/tmp/quickstart/content/posts/my-first-post.md" created
+
+$ cat content/posts/my-first-post.md
++++
+date = '2025-07-26T17:15:47Z'
+draft = true
+title = 'My First Post'
++++
+
+$ vi content/posts/my-first-post.md
+
+$ cat content/posts/my-first-post.md
++++
+date = '2025-07-26T17:15:47Z'
+draft = true
+title = 'My First Post'
++++
+## Introduction
+
+This is **bold** text, and this is *emphasized* text.
+
+Visit the [Hugo](https://gohugo.io) website!
+
+$ hugo server -D
+```
+
+### Publish
+
+As stated at [https://gohugo.io/getting-started/usage/](https://gohugo.io/getting-started/usage/]:
+
+- Hugo does not clear the public directory before building your site. Existing files are overwritten, but not deleted. This behavior is intentional to prevent the inadvertent removal of files that you may have added to the public directory after the build.
+- Depending on your needs, you may wish to manually clear the contents of the public directory before every build.
+
+With that information:
+
+```
+$ rm -rf public
+$ hugo
 ```
