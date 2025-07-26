@@ -11,6 +11,9 @@ Hugo playground
 ## References
 
 - [https://gohugo.io/](https://gohugo.io/)
+  - [https://gohugo.io/getting-started/](https://gohugo.io/getting-started/)
+  - [https://gohugo.io/documentation/](https://gohugo.io/documentation/)
+  - [https://themes.gohugo.io/](https://themes.gohugo.io/)
 - [https://github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
 
 ## Editions
