@@ -119,7 +119,18 @@ $ cat hugo.toml
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+```
+**Option 1**: follow `hugo new site quickstart` instructions to use `hugo new theme <THEMENAME>`:
+```
+$ hugo new theme barebone
+Creating new theme in /tmp/quickstart/themes/barebone
 
+$ echo "theme = 'barebone'" >> hugo.toml
+
+$ hugo server
+```
+**Option 2**: follow [https://gohugo.io/getting-started/quick-start/](https://gohugo.io/getting-started/quick-start/) instructions:
+```
 $ git init
 
 $ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
