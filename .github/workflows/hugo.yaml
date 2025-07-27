@@ -48,10 +48,9 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      - name: Theme setup
+      - name: Build.sh
         run: |
-          hugo new theme barebone
-          echo "theme = 'barebone'" >> hugo.toml
+          bash build.sh
       - name: Cache Restore
         id: cache-restore
         uses: actions/cache/restore@v4
