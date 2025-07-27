@@ -19,6 +19,12 @@ Hugo playground
   - [https://themes.gohugo.io/](https://themes.gohugo.io/)
 - [https://github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
 
+Google: 'hugo dollar sign'
+
+- [https://discourse.gohugo.io/t/the-dot-and-the-dollar-in-context/48604](https://discourse.gohugo.io/t/the-dot-and-the-dollar-in-context/48604)
+  - [A Crash Course on Go Templates](https://www.youtube.com/watch?v=k5wJv4XO7a0)
+  - [Golang documentation for the `text/template` package](https://pkg.go.dev/text/template)
+
 ## Editions
 
 Adapted from [https://github.com/gohugoio/hugo](https://github.com/gohugoio/hugo):
