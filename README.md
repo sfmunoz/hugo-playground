@@ -10,6 +10,9 @@ Hugo playground
 - [Quick start](#quick-start)
   - [Add content](#add-content)
   - [Publish](#publish)
+- [Themes](#themes)
+  - [Git submodule](#git-submodule)
+  - [Hugo module](#hugo-module)
 
 ## References
 
@@ -188,4 +191,45 @@ With that information:
 ```
 $ rm -rf public
 $ hugo
+```
+
+## Themes
+
+Ref: [https://github.com/halogenica/beautifulhugo](https://github.com/halogenica/beautifulhugo)
+
+### Git submodule
+
+```
+$ git submodule add https://github.com/halogenica/beautifulhugo.git themes/beautifulhugo
+
+$ echo "theme = 'beautifulhugo'" >> hugo.toml
+```
+
+### Hugo module
+
+```
+$ hugo mod init github.com/sfmunoz/hugo-playground
+
+$ cat go.mod
+module github.com/sfmunoz/hugo-playground
+
+go 1.24.5
+
+$ hugo mod get github.com/halogenica/beautifulhugo
+
+$ cat go.mod
+module github.com/sfmunoz/hugo-playground
+
+go 1.24.5
+
+require github.com/halogenica/beautifulhugo v0.0.0-20250508050025-e69e25d4ca0d // indirect
+
+$ cat go.sum
+github.com/halogenica/beautifulhugo v0.0.0-20250508050025-e69e25d4ca0d h1:H3Gf3B7nxMscrz+v7fn+PavLMUR+vCpcRJpzCAZy57A=
+github.com/halogenica/beautifulhugo v0.0.0-20250508050025-e69e25d4ca0d/go.mod h1:4dwHt6njigk+fr9W3Bg+OflL4LKzkjbXAULXvr3mYLs=
+
+$ cat >> hugo.html << __EOF
+[[module.imports]]
+  path = "github.com/halogenica/beautifulhugo"
+__EOF
 ```
