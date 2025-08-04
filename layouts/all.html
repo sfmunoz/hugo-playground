@@ -4,24 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ site.Title }}</title>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <style>
-      .icon {
-        vertical-align: sub;
-        padding-right: 0.25rem;
-        display: inline-block;
-        width: 1.5em;
-        height: 1.3em;
-        margin-right: 0.2rem;
-        stroke-width: 0;
-        stroke: currentColor;
-        fill: currentColor;
-      }
-      .avatar {
-        border-radius: 10em;
-      }
-    </style>
+    {{ with (templates.Defer (dict "key" "global")) }} {{ partial "css.html" .
+    }} {{ end }}
   </head>
   <body>
     <header>
