@@ -43,11 +43,20 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+      - name: pnpm setup
+        uses: pnpm/action-setup@v2
+        with:
+          version: 10.14.0
+      - name: Node setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "pnpm"
+      - name: pnpm install
+        run: pnpm install
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build.sh
         run: |
           bash build.sh
@@ -58,8 +67,7 @@ jobs:
           path: |
             ${{ runner.temp }}/hugo_cache
           key: hugo-${{ github.run_id }}
-          restore-keys:
-            hugo-
+          restore-keys: hugo-
       - name: Configure Git
         run: git config core.quotepath false
       - name: Build with Hugo
