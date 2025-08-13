@@ -1,5 +1,24 @@
 @import "tailwindcss";
+
 @plugin "daisyui" {
   themes: nord --default, dark --prefersdark;
 }
+
 @source "hugo_stats.json";
+
+@layer base {
+  a {
+    @apply link link-primary;
+  }
+  ul {
+    list-style-type: disc;
+    @apply mt-5;
+  }
+  li {
+    @apply ml-6 my-2;
+  }
+}
+
+@utility btn {
+  @apply rounded-md;
+}
