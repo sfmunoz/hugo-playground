@@ -9,29 +9,31 @@
     }} {{ end }}
   </head>
   <body>
-    <header class="pt-5 bg-cyan-50">
-      <nav
-        class="flex flex-row justify-center align-middle gap-16 [&_a]:border [&_a]:rounded [&_a]:px-3 [&_a]:py-2 [&_a]:border-slate-400"
-      >
-        <a
-          href="https://sfmunoz.com/"
-          class="flex flex-row justify-center align-middle gap-3"
+    <header class="pt-5 bg-secondary">
+      <nav class="flex flex-row justify-center align-middle gap-16">
+        <a href="https://sfmunoz.com/" class="btn btn-neutral btn-dash"
           ><img
             src="https://avatars.githubusercontent.com/u/46285520"
             class="size-7 rounded-2xl"
           />Home</a
         >
-        <a href="https://sfmunoz.com/logit/">Logit</a>
+        <a href="https://sfmunoz.com/logit/" class="btn btn-neutral btn-dash"
+          >Logit</a
+        >
         <a
           href="https://sfmunoz.com/hugo-playground/"
           aria-current="true"
-          class="font-bold"
+          class="btn btn-neutral btn-outline"
           >Hugo playground</a
         >
-        <a href="https://sfmunoz.com/jekyll-playground/">Jekyll playground</a>
+        <a
+          href="https://sfmunoz.com/jekyll-playground/"
+          class="btn btn-neutral btn-dash"
+          >Jekyll playground</a
+        >
         <a
           href="https://github.com/sfmunoz/hugo-playground"
-          class="flex flex-row justify-center align-middle gap-3"
+          class="btn btn-neutral btn-dash"
         >
           <svg viewBox="0 0 32 32" height="24px" width="24px">
             <path
@@ -41,18 +43,16 @@
         >
       </nav>
       <h1 class="font-bold text-5xl m-6 text-center">{{ page.Title }}</h1>
-      <p class="text-center">No description</p>
-      <hr class="my-8 text-slate-400" />
-    </header>
-    <main
-      class="w-192 mx-auto [&_ul]:list-disc [&_ul]:mt-5 [&_li]:ml-6 [&_li]:my-2 [&_a]:underline"
-    >
-      {{ .Content }}
-    </main>
-    <footer>
-      <hr class="my-8 text-slate-400 w-256 m-auto" />
       <p class="text-center">
-        <a href="https://github.com/sfmunoz/hugo-playground" class="underline"
+        <a href="https://gohugo.io/">Hugo</a> playground
+      </p>
+      <hr class="my-8 text-secondary" />
+    </header>
+    <main class="w-192 mx-auto">{{ .Content }}</main>
+    <footer>
+      <hr class="my-8 text-secondary w-256 m-auto" />
+      <p class="text-center">
+        <a href="https://github.com/sfmunoz/hugo-playground"
           >https://github.com/sfmunoz/hugo-playground</a
         >
       </p>
