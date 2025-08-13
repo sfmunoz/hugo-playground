@@ -181,7 +181,7 @@ $ hugo server -D
 
 ### Publish
 
-As stated at [https://gohugo.io/getting-started/usage/](https://gohugo.io/getting-started/usage/]:
+As stated at [https://gohugo.io/getting-started/usage/](https://gohugo.io/getting-started/usage/):
 
 - Hugo does not clear the public directory before building your site. Existing files are overwritten, but not deleted. This behavior is intentional to prevent the inadvertent removal of files that you may have added to the public directory after the build.
 - Depending on your needs, you may wish to manually clear the contents of the public directory before every build.
