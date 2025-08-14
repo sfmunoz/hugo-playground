@@ -8,6 +8,7 @@
 
 @source "hugo_stats.json";
 
+/*
 @layer base {
   a {
     @apply link link-primary;
@@ -20,10 +21,13 @@
     @apply ml-6 my-2;
   }
 }
+*/
 
 /* Alternative: @utility btn { @apply rounded-md; } */
+/*
 @layer utilities {
   .btn {
     @apply rounded-md;
   }
 }
+*/
