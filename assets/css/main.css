@@ -19,6 +19,9 @@
   }
 }
 
-@utility btn {
-  @apply rounded-md;
+/* Alternative: @utility btn { @apply rounded-md; } */
+@layer utilities {
+  .btn {
+    @apply rounded-md;
+  }
 }
